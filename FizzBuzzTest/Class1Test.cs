@@ -1,18 +1,24 @@
-using FizzBuzz;
 using Moq;
 using Xunit;
 
 namespace FizzBuzzTest
 {
+    using FizzBuzz;
+
     public class Class1Test
     {
         [Fact]
-        public void Test1()
+        public void Should_return_Fizz_when_number_is_multiples_3()
         {
-            Class1 class1 = new Class1();
+            // Given
+            FizzBuzz fizzBuzz = new FizzBuzz();
+            var number = 3;
+
+            // When
+            var res = fizzBuzz.CountOff(number);
 
             //then
-            Assert.NotNull(class1);
+            Assert.Equal(res, "Fizz");
         }
     }
 }
