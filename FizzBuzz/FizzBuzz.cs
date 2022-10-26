@@ -15,7 +15,14 @@ namespace FizzBuzz
                 countOffResult += "Fizz";
             }
 
-            
+            if (number % 5 == 0)
+            {
+                isSpecialNumber = true;
+                countOffResult += "Buzz";
+            }
+
+           
+
 
             if (isSpecialNumber)
             {
