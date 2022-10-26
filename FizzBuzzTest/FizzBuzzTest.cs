@@ -19,5 +19,19 @@ namespace FizzBuzzTest
             //then
             Assert.Equal("2", shout);
         }
+
+        [Fact]
+        public void Should_return_Fizz_when_count_given_number_has_factor_of_3()
+        {
+            //givem
+            var fb = new FizzBuzzClass();
+            int num = 3;
+
+            //when
+            var shout = fb.Shout(num);
+
+            //then
+            Assert.Equal("Fizz", shout);
+        }
     }
 }
