@@ -35,11 +35,11 @@ namespace FizzBuzzTest
         }
 
         [Fact]
-        public void Should_return_Buzz_when_count_given_number_has_factor_of_7()
+        public void Should_return_Buzz_when_count_given_number_has_factor_of_5()
         {
             //givem
             var fb = new FizzBuzzClass();
-            int num = 7;
+            int num = 5;
 
             //when
             var shout = fb.Shout(num);
