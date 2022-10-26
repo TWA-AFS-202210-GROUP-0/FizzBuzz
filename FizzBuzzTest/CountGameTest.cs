@@ -68,5 +68,14 @@ namespace FizzBuzzTest
             string ordMappingResult = countGame.OrdMapping(number);
             Assert.Equal(expected: "BuzzWhizz", ordMappingResult);
         }
+
+        [Fact]
+        public void Should_return_FizzBuzzWhizz_when_given_number_multiple_3_5_7()
+        {
+            CountGame countGame = new CountGame();
+            int number = 105;
+            string ordMappingResult = countGame.OrdMapping(number);
+            Assert.Equal(expected: "FizzBuzzWhizz", ordMappingResult);
+        }
     }
 }
