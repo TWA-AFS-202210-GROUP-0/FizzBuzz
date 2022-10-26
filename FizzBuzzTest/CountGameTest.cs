@@ -23,5 +23,14 @@ namespace FizzBuzzTest
             string ordMappingResult = countGame.OrdMapping(number);
             Assert.Equal(expected: "Fizz", ordMappingResult);
         }
+
+        [Fact]
+        public void Should_return_Buzz_when_given_number_multiple_5()
+        {
+            CountGame countGame = new CountGame();
+            int number = 5;
+            string ordMappingResult = countGame.OrdMapping(number);
+            Assert.Equal(expected: "Buzz", ordMappingResult);
+        }
     }
 }
