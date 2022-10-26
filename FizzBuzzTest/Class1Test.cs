@@ -34,5 +34,19 @@ namespace FizzBuzzTest
             //then
             Assert.Equal(res, "Buzz");
         }
+
+        [Fact]
+        public void Should_return_Whizz_when_number_is_multiples_7()
+        {
+            // Given
+            FizzBuzz fizzBuzz = new FizzBuzz();
+            var number = 7;
+
+            // When
+            var res = fizzBuzz.CountOff(number);
+
+            //then
+            Assert.Equal(res, "Whizz");
+        }
     }
 }
