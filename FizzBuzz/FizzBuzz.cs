@@ -6,7 +6,7 @@ namespace FizzBuzz
     {
         public string Shout(int number)
         {
-            return null;
+            return number.ToString();
         }
     }
 }
