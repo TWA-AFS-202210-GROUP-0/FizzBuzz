@@ -6,6 +6,11 @@ namespace FizzBuzz
     {
         public string Shout(int number)
         {
+            if (number.ToString().Contains("3"))
+            {
+                return "Fizz";
+            }
+
             string res = string.Empty;
 
             if (number % 3 == 0)

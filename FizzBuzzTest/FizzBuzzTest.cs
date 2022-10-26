@@ -76,18 +76,60 @@ namespace FizzBuzzTest
             Assert.Equal("FizzBuzz", shout);
         }
 
-        //[Fact]
-        //public void Should_return_Fizz_when_count_given_number_contains_3()
-        //{
-        //    //givem
-        //    var fb = new FizzBuzzClass();
-        //    int num = 13;
+        [Fact]
+        public void Should_return_FizzWhizz_when_count_given_number_has_factor_of_3_and_7()
+        {
+            //givem
+            var fb = new FizzBuzzClass();
+            int num = 21;
 
-        //    //when
-        //    var shout = fb.Shout(num);
+            //when
+            var shout = fb.Shout(num);
 
-        //    //then
-        //    Assert.Equal("Fizz", shout);
-        //}
+            //then
+            Assert.Equal("FizzWhizz", shout);
+        }
+
+        [Fact]
+        public void Should_return_BuzzWhizz_when_count_given_number_has_factor_of_5_and_7()
+        {
+            //givem
+            var fb = new FizzBuzzClass();
+            int num = 35;
+
+            //when
+            var shout = fb.Shout(num);
+
+            //then
+            Assert.Equal("BuzzWhizz", shout);
+        }
+
+        [Fact]
+        public void Should_return_FizzBuzzWhizz_when_count_given_number_has_factor_of_3_5_and_7()
+        {
+            //givem
+            var fb = new FizzBuzzClass();
+            int num = 105;
+
+            //when
+            var shout = fb.Shout(num);
+
+            //then
+            Assert.Equal("FizzBuzzWhizz", shout);
+        }
+
+        [Fact]
+        public void Should_return_Fizz_when_count_given_number_contains_3()
+        {
+            //givem
+            var fb = new FizzBuzzClass();
+            int num = 13;
+
+            //when
+            var shout = fb.Shout(num);
+
+            //then
+            Assert.Equal("Fizz", shout);
+        }
     }
 }
