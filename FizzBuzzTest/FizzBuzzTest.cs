@@ -47,5 +47,19 @@ namespace FizzBuzzTest
             //then
             Assert.Equal("Buzz", shout);
         }
+
+        [Fact]
+        public void Should_return_Buzz_when_count_given_number_has_factor_of_7()
+        {
+            //givem
+            var fb = new FizzBuzzClass();
+            int num = 7;
+
+            //when
+            var shout = fb.Shout(num);
+
+            //then
+            Assert.Equal("Whizz", shout);
+        }
     }
 }

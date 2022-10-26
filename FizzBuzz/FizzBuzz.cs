@@ -16,6 +16,11 @@ namespace FizzBuzz
                 return "Buzz";
             }
 
+            if (number % 7 == 0)
+            {
+                return "Whizz";
+            }
+
             return number.ToString();
         }
     }
