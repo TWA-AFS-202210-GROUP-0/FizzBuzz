@@ -6,22 +6,24 @@ namespace FizzBuzz
     {
         public string Shout(int number)
         {
+            string res = string.Empty;
+
             if (number % 3 == 0)
             {
-                return "Fizz";
+                res += "Fizz";
             }
 
             if (number % 5 == 0)
             {
-                return "Buzz";
+                res += "Buzz";
             }
 
             if (number % 7 == 0)
             {
-                return "Whizz";
+                res += "Whizz";
             }
 
-            return number.ToString();
+            return res;
         }
     }
 }
