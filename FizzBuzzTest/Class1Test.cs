@@ -48,5 +48,19 @@ namespace FizzBuzzTest
             //then
             Assert.Equal(res, "Whizz");
         }
+
+        [Fact]
+        public void Should_return_Fizz_when_number_contain_3()
+        {
+            // Given
+            FizzBuzz fizzBuzz = new FizzBuzz();
+            var number = 13;
+
+            // When
+            var res = fizzBuzz.CountOff(number);
+
+            //then
+            Assert.Equal(res, "Fizz");
+        }
     }
 }

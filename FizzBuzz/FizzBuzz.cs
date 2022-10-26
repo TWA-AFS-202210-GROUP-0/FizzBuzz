@@ -25,6 +25,11 @@ namespace FizzBuzz
                 return "Whizz";
             }
 
+            if (number.ToString().Contains("3"))
+            {
+                return "Fizz";
+            }
+
             else
             {
                 return string.Empty;
