@@ -9,7 +9,7 @@ namespace FizzBuzz
 
         public static string Play()
         {
-            return null;
+            return "1";
         }
     }
 }
