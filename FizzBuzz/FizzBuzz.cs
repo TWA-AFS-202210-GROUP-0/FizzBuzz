@@ -23,7 +23,6 @@ namespace FizzBuzz
 
            
 
-
             if (isSpecialNumber)
             {
                 return countOffResult;

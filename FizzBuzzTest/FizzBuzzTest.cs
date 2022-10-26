@@ -47,5 +47,19 @@ namespace FizzBuzzTest
             //then
             Assert.Equal("FizzBuzz", result);
         }
+
+        [Fact]
+        public void Should_return_FizzBuzz_when_count_off_given_number_all_multiple_of_three_and_five_and_seven()
+        {
+            //Given
+            FizzBuzzCount test = new FizzBuzzCount();
+            int number = 105;
+
+            //when
+            string result = test.CountOff(number);
+
+            //then
+            Assert.Equal("FizzBuzzWhizz", result);
+        }
     }
 }
