@@ -57,7 +57,29 @@ namespace FizzBuzz
                 return res.Length > 0 ? res : numString;
             }
             else { return "Invalid negative Number!"; }
+        }
 
+        public object GetRequirementFive(int number)
+        {
+            if (number > 0)
+            {
+                string res = string.Empty;
+                string numString = number.ToString();
+                int startIndex = 0;
+                int length = 1;
+                while (startIndex <= numString.Length - 1)
+                {
+                    string substring = numString.Substring(startIndex, length);
+                    if (substring == "3") { return "Fizz"; }
+                    startIndex += 1;
+                }
+
+                if (number % 3 == 0) { res += "Fizz"; }
+                if (number % 5 == 0) { res += "Buzz"; }
+                if (number % 7 == 0) { res += "Whizz"; }
+                return res.Length > 0 ? res : numString;
+            }
+            else { return "Invalid negative Number!"; }
         }
     }
 }
