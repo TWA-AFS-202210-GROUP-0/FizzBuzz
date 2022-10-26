@@ -137,5 +137,17 @@ namespace FizzBuzzTest
             var result = countNumber.GetRequirementThree(number);
             Assert.Equal("Invalid negative Number!", result);
         }
-    }
+
+        [Fact]
+        public void Should_return_Fizz_when_CountOff_contains_3()
+        {
+            //given
+            CountOff countNumber = new CountOff();
+            int number = 13;
+            //then
+            var result = countNumber.GetRequirementFour(number);
+            Assert.Equal("Fizz", result);
+
+
+        }
 }
