@@ -21,7 +21,11 @@ namespace FizzBuzz
                 countOffResult += "Buzz";
             }
 
-           
+            if (number % 7 == 0)
+            {
+                isSpecialNumber = true;
+                countOffResult += "Whizz";
+            }
 
             if (isSpecialNumber)
             {
