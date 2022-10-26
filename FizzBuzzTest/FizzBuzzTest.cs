@@ -21,7 +21,7 @@ namespace FizzBuzzTest
         }
 
         [Fact]
-        public void Should_return_Fizz_when_count_off_given_number_multiple_of_three()
+        public void Should_return_Fizz_when_count_off_given_number_only_multiple_of_three()
         {
             //Given
             FizzBuzzCount test = new FizzBuzzCount();
@@ -32,6 +32,20 @@ namespace FizzBuzzTest
 
             //then
             Assert.Equal("Fizz", result);
+        }
+
+        [Fact]
+        public void Should_return_FizzBuzz_when_count_off_given_number_both_multiple_of_three_and_five()
+        {
+            //Given
+            FizzBuzzCount test = new FizzBuzzCount();
+            int number = 15;
+
+            //when
+            string result = test.CountOff(number);
+
+            //then
+            Assert.Equal("FizzBuzz", result);
         }
     }
 }
