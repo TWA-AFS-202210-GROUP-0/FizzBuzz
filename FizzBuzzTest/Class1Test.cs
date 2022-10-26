@@ -7,12 +7,14 @@ namespace FizzBuzzTest
     public class Class1Test
     {
         [Fact]
-        public void Test1()
+        public void Should_return_the_input_number_as_string_Given_normal_case()
         {
-            Class1 class1 = new Class1();
-
-            //then
-            Assert.NotNull(class1);
+            //Given
+            var number = 1;
+            //When
+            var result = FizzBuzzGame.Play();
+            //Then
+            Assert.Equal("1", result);
         }
     }
 }
