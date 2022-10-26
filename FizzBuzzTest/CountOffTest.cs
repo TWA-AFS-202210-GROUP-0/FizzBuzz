@@ -51,6 +51,28 @@ namespace FizzBuzzTest
         }
 
         [Fact]
+        public void Should_return_normalNumber_when_CountOff_requirement2_is_neither_multiples_of_three_or_five_or_seven()
+        {
+            //given
+            CountOff countNumber = new CountOff();
+            int number = 2;
+            //then
+            var result = countNumber.GetRequirementTwo(number);
+            Assert.Equal("2", result);
+        }
+
+        [Fact]
+        public void Should_return_warning_when_CountOff_requirement2_is_negative()
+        {
+            //given
+            CountOff countNumber = new CountOff();
+            int number = -2;
+            //then
+            var result = countNumber.GetRequirementTwo(number);
+            Assert.Equal("Invalid negative Number!", result);
+        }
+
+        [Fact]
         public void Should_return_BuzzWhizz_when_CountOff_is_multiples_of_five_and_seven()
         {
             //given
@@ -92,6 +114,28 @@ namespace FizzBuzzTest
             //then
             var result = countNumber.GetRequirementThree(number);
             Assert.Equal("FizzBuzzWhizz", result);
+        }
+
+        [Fact]
+        public void Should_return_normalNumber_when_CountOff_requirement3_is_neither_multiples_of_three_or_five_or_seven()
+        {
+            //given
+            CountOff countNumber = new CountOff();
+            int number = 2;
+            //then
+            var result = countNumber.GetRequirementThree(number);
+            Assert.Equal("2", result);
+        }
+
+        [Fact]
+        public void Should_return_warning_when_CountOff_requirement3_is_negative()
+        {
+            //given
+            CountOff countNumber = new CountOff();
+            int number = -2;
+            //then
+            var result = countNumber.GetRequirementThree(number);
+            Assert.Equal("Invalid negative Number!", result);
         }
     }
 }
