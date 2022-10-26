@@ -14,18 +14,47 @@ namespace FizzBuzzTest
             //Given
             var number = 1;
             //When
-            var result = FizzBuzzGame.Play();
+            var result = FizzBuzzGame.Play(number);
             //Then
             Assert.Equal("1", result);
         }
 
+
         [Fact]
-        public void Should_return_correct_answer_Given_all_cases()
+        public void Should_return_correct_answer_Given_all_mutiple_cases_()
         {
             //Given
-            var numbers = new List<double> { 1, 3, 5, 7, 15, 21, 35, 105 };
-            var results = new List<string>
+            var numbers = new List<int> { 1, 3, 5, 7, 15, 21, 70, 105 };
+            var expects = new List<string>
                 { "1", "Fizz", "Buzz", "Whizz", "FizzBuzz", "FizzWhizz", "BuzzWhizz", "FizzBuzzWhizz" };
+            //When
+            var actuals = new List<string>();
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                actuals.Add(FizzBuzzGame.Play(numbers[i]));
+            }
+
+            //Then
+            Assert.Equal(expects, actuals);
+        }
+
+
+        [Fact]
+        public void Should_return_correct_answer_Given_all_contains_cases_()
+        {
+            //Given
+            var numbers = new List<int> { 13, 23, 35 };
+            var expects = new List<string>
+                { "Fizz", "Fizz", "Fizz" };
+            //When
+            var actuals = new List<string>();
+            for (int i = 0; i < numbers.Count; i++)
+            {
+                actuals.Add(FizzBuzzGame.Play(numbers[i]));
+            }
+
+            //Then
+            Assert.Equal(expects, actuals);
         }
     }
 }
