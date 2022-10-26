@@ -49,5 +49,49 @@ namespace FizzBuzzTest
             var result = countNumber.GetRequirementTwo(number);
             Assert.Equal("Whizz", result);
         }
+
+        [Fact]
+        public void Should_return_BuzzWhizz_when_CountOff_is_multiples_of_five_and_seven()
+        {
+            //given
+            CountOff countNumber = new CountOff();
+            int number = 35;
+            //then
+            var result = countNumber.GetRequirementThree(number);
+            Assert.Equal("BuzzWhizz", result);
+        }
+
+        [Fact]
+        public void Should_return_FizzWhizz_when_CountOff_is_multiples_of_three_and_seven()
+        {
+            //given
+            CountOff countNumber = new CountOff();
+            int number = 21;
+            //then
+            var result = countNumber.GetRequirementThree(number);
+            Assert.Equal("FizzWhizz", result);
+        }
+
+        [Fact]
+        public void Should_return_FizzBuzz_when_CountOff_is_multiples_of_three_and_five()
+        {
+            //given
+            CountOff countNumber = new CountOff();
+            int number = 15;
+            //then
+            var result = countNumber.GetRequirementThree(number);
+            Assert.Equal("FizzBuzz", result);
+        }
+
+        [Fact]
+        public void Should_return_FizzBuzzWhizz_when_CountOff_is_multiples_of_three_and_five_and_seven()
+        {
+            //given
+            CountOff countNumber = new CountOff();
+            int number = 105;
+            //then
+            var result = countNumber.GetRequirementThree(number);
+            Assert.Equal("FizzBuzzWhizz", result);
+        }
     }
 }
