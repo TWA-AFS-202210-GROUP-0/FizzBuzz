@@ -6,44 +6,44 @@ namespace FizzBuzz
     {
         public string OrdMapping(int number)
         {
-            if (number.ToString().Contains("3"))
+            if (number.ToString().Contains(Consts.StringThree))
             {
-                return "Fizz";
+                return Consts.Fizz;
             }
 
-            if (number % 3 == 0)
+            if (number % Consts.Three == 0)
             {
-                if (number % 5 == 0)
+                if (number % Consts.Five == 0)
                 {
-                    if (number % 7 == 0)
+                    if (number % Consts.Seven == 0)
                     {
-                        return "FizzBuzzWhizz";
+                        return Consts.FizzBuzzWhizz;
                     }
 
-                    return "FizzBuzz";
+                    return Consts.FizzBuzz;
                 }
 
-                if (number % 7 == 0)
+                if (number % Consts.Seven == 0)
                 {
-                    return "FizzWhizz";
+                    return Consts.FizzWhizz;
                 }
 
-                return "Fizz";
+                return Consts.Fizz;
             }
 
-            if (number % 5 == 0)
+            if (number % Consts.Five == 0)
             {
-                if (number % 7 == 0)
+                if (number % Consts.Seven == 0)
                 {
-                    return "BuzzWhizz";
+                    return Consts.BuzzWhizz;
                 }
 
-                return "Buzz";
+                return Consts.Buzz;
             }
 
-            if (number % 7 == 0)
+            if (number % Consts.Seven == 0)
             {
-                return "Whizz";
+                return Consts.Whizz;
             }
 
             return number.ToString();
