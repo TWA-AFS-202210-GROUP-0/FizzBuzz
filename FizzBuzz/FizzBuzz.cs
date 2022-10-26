@@ -5,13 +5,25 @@ namespace FizzBuzz
     public class FizzBuzzCount
     {
         public string CountOff(int number)
-        { 
+        {
+            bool isSpecialNumber = false;
+            string countOffResult = string.Empty;
+
             if (number % 3 == 0)
             {
-                return "Fizz";
+                isSpecialNumber = true;
+                countOffResult += "Fizz";
             }
 
-            return number.ToString();
+
+            if (isSpecialNumber)
+            {
+                return countOffResult;
+            }
+            else
+            {
+                return number.ToString();
+            }
         }
     }
 }
