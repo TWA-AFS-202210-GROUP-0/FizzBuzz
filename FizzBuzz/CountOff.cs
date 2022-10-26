@@ -5,7 +5,6 @@ namespace FizzBuzz
 {
     public class CountOff
     {
-        //return number % 7 == 0 ? "FizzBuzzWizz" : "FizzBuzz";
         public string GetRequirementOne(int number)
         {
             return number.ToString();
@@ -31,16 +30,34 @@ namespace FizzBuzz
                 if (number % 3 == 0) { res += "Fizz"; }
                 if (number % 5 == 0) { res += "Buzz"; }
                 if (number % 7 == 0) { res += "Whizz"; }
-                if (res.Length > 0)
-                {
-                    return res;
-                }
-                else
-                {
-                    return number.ToString();
-                }
+                return res.Length > 0 ? res : number.ToString();
             }
             else { return "Invalid negative Number!";  }
+        }
+
+        public string GetRequirementFour(int number)
+        {
+            if (number > 0)
+            {
+                string res = string.Empty;
+                string numString = number.ToString();
+                bool containThree = false;
+                int startIndex = 0;
+                int length = 1;
+                while (startIndex <= numString.Length - 1)
+                {
+                    string substring = numString.Substring(startIndex, length);
+                    if (substring == "3") { containThree = true; }
+                    startIndex += 1;
+                }
+
+                if (containThree | number % 3 == 0) { res += "Fizz"; }
+                if (number % 5 == 0) { res += "Buzz"; }
+                if (number % 7 == 0) { res += "Whizz"; }
+                return res.Length > 0 ? res : numString;
+            }
+            else { return "Invalid negative Number!"; }
+
         }
     }
 }

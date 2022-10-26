@@ -147,7 +147,62 @@ namespace FizzBuzzTest
             //then
             var result = countNumber.GetRequirementFour(number);
             Assert.Equal("Fizz", result);
-
-
         }
+
+        [Fact]
+        public void Should_return_Fizz_when_CountOff_isMultipleOf_3()
+        {
+            //given
+            CountOff countNumber = new CountOff();
+            int number = 6;
+            //then
+            var result = countNumber.GetRequirementFour(number);
+            Assert.Equal("Fizz", result);
+        }
+
+        [Fact]
+        public void Should_return_FizzBuzz_when_CountOff_Contain_3_and_is_Multiple_of_5()
+        {
+            //given
+            CountOff countNumber = new CountOff();
+            int number = 30;
+            //then
+            var result = countNumber.GetRequirementFour(number);
+            Assert.Equal("FizzBuzz", result);
+        }
+
+        [Fact]
+        public void Should_return_FizzBuzzWhizz_when_CountOff_Contain_3_and_is_Multiple_of_5_and_7()
+        {
+            //given
+            CountOff countNumber = new CountOff();
+            int number = 35;
+            //then
+            var result = countNumber.GetRequirementFour(number);
+            Assert.Equal("FizzBuzzWhizz", result);
+        }
+
+        [Fact]
+        public void Should_return_normalNumber_when_CountOff_requirement4_is_neither_multiples_of_three_or_five_or_seven_orContain3()
+        {
+            //given
+            CountOff countNumber = new CountOff();
+            int number = 11;
+            //then
+            var result = countNumber.GetRequirementFour(number);
+            Assert.Equal("11", result);
+        }
+
+        [Fact]
+        public void Should_return_warning_when_CountOff_requirement4_is_negative()
+        {
+            //given
+            CountOff countNumber = new CountOff();
+            int number = -2;
+            //then
+            var result = countNumber.GetRequirementFour(number);
+            Assert.Equal("Invalid negative Number!", result);
+        }
+
+    }
 }
