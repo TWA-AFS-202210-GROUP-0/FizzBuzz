@@ -19,5 +19,19 @@ namespace FizzBuzzTest
             //then
             Assert.Equal("1", result);
         }
+
+        [Fact]
+        public void Should_return_Fizz_when_count_off_given_number_multiple_of_three()
+        {
+            //Given
+            FizzBuzzCount test = new FizzBuzzCount();
+            int number = 3;
+
+            //when
+            string result = test.CountOff(number);
+
+            //then
+            Assert.Equal("Fizz", result);
+        }
     }
 }
