@@ -14,6 +14,12 @@ namespace FizzBuzz
             {
                 return "Fizz";
             }
+
+           if (number % 5 == 0)
+            {
+                return "Buzz";
+            }
+
            else
             {
                 return string.Empty;

@@ -20,5 +20,19 @@ namespace FizzBuzzTest
             //then
             Assert.Equal(res, "Fizz");
         }
+
+        [Fact]
+        public void Should_return_Buzz_when_number_is_multiples_5()
+        {
+            // Given
+            FizzBuzz fizzBuzz = new FizzBuzz();
+            var number = 5;
+
+            // When
+            var res = fizzBuzz.CountOff(number);
+
+            //then
+            Assert.Equal(res, "Buzz");
+        }
     }
 }
