@@ -6,6 +6,12 @@ namespace FizzBuzz
     {
         public string CountOff(int number)
         {
+
+            if (number.ToString().Contains("3"))
+            {
+                return "Fizz";
+            }
+
             bool isSpecialNumber = false;
             string countOffResult = string.Empty;
 
