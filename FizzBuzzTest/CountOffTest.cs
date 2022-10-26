@@ -12,7 +12,7 @@ namespace FizzBuzzTest
             //given
             CountOff countNumber = new CountOff();
             int number = 3;
-            //then
+            //when
             var result = countNumber.GetRequirementOne(number);
             Assert.Equal("3", result);
         }
@@ -23,7 +23,7 @@ namespace FizzBuzzTest
             //given
             CountOff countNumber = new CountOff();
             int number = 9;
-            //then
+            //when
             var result = countNumber.GetRequirementTwo(number);
             Assert.Equal("Fizz", result);
         }
@@ -34,7 +34,7 @@ namespace FizzBuzzTest
             //given
             CountOff countNumber = new CountOff();
             int number = 10;
-            //then
+            //when
             var result = countNumber.GetRequirementTwo(number);
             Assert.Equal("Buzz", result);
         }
@@ -45,7 +45,7 @@ namespace FizzBuzzTest
             //given
             CountOff countNumber = new CountOff();
             int number = 14;
-            //then
+            //when
             var result = countNumber.GetRequirementTwo(number);
             Assert.Equal("Whizz", result);
         }
@@ -56,7 +56,7 @@ namespace FizzBuzzTest
             //given
             CountOff countNumber = new CountOff();
             int number = 2;
-            //then
+            //when
             var result = countNumber.GetRequirementTwo(number);
             Assert.Equal("2", result);
         }
@@ -67,7 +67,7 @@ namespace FizzBuzzTest
             //given
             CountOff countNumber = new CountOff();
             int number = -2;
-            //then
+            //when
             var result = countNumber.GetRequirementTwo(number);
             Assert.Equal("Invalid negative Number!", result);
         }
@@ -78,7 +78,7 @@ namespace FizzBuzzTest
             //given
             CountOff countNumber = new CountOff();
             int number = 35;
-            //then
+            //when
             var result = countNumber.GetRequirementThree(number);
             Assert.Equal("BuzzWhizz", result);
         }
@@ -89,7 +89,7 @@ namespace FizzBuzzTest
             //given
             CountOff countNumber = new CountOff();
             int number = 21;
-            //then
+            //when
             var result = countNumber.GetRequirementThree(number);
             Assert.Equal("FizzWhizz", result);
         }
@@ -100,7 +100,7 @@ namespace FizzBuzzTest
             //given
             CountOff countNumber = new CountOff();
             int number = 15;
-            //then
+            //when
             var result = countNumber.GetRequirementThree(number);
             Assert.Equal("FizzBuzz", result);
         }
@@ -111,7 +111,7 @@ namespace FizzBuzzTest
             //given
             CountOff countNumber = new CountOff();
             int number = 105;
-            //then
+            //when
             var result = countNumber.GetRequirementThree(number);
             Assert.Equal("FizzBuzzWhizz", result);
         }
@@ -122,7 +122,7 @@ namespace FizzBuzzTest
             //given
             CountOff countNumber = new CountOff();
             int number = 2;
-            //then
+            //when
             var result = countNumber.GetRequirementThree(number);
             Assert.Equal("2", result);
         }
@@ -133,7 +133,7 @@ namespace FizzBuzzTest
             //given
             CountOff countNumber = new CountOff();
             int number = -2;
-            //then
+            //when
             var result = countNumber.GetRequirementThree(number);
             Assert.Equal("Invalid negative Number!", result);
         }
@@ -144,7 +144,7 @@ namespace FizzBuzzTest
             //given
             CountOff countNumber = new CountOff();
             int number = 13;
-            //then
+            //when
             var result = countNumber.GetRequirementFour(number);
             Assert.Equal("Fizz", result);
         }
@@ -155,7 +155,7 @@ namespace FizzBuzzTest
             //given
             CountOff countNumber = new CountOff();
             int number = 6;
-            //then
+            //when
             var result = countNumber.GetRequirementFour(number);
             Assert.Equal("Fizz", result);
         }
@@ -166,7 +166,7 @@ namespace FizzBuzzTest
             //given
             CountOff countNumber = new CountOff();
             int number = 30;
-            //then
+            //when
             var result = countNumber.GetRequirementFour(number);
             Assert.Equal("FizzBuzz", result);
         }
@@ -177,7 +177,7 @@ namespace FizzBuzzTest
             //given
             CountOff countNumber = new CountOff();
             int number = 35;
-            //then
+            //when
             var result = countNumber.GetRequirementFour(number);
             Assert.Equal("FizzBuzzWhizz", result);
         }
@@ -188,7 +188,7 @@ namespace FizzBuzzTest
             //given
             CountOff countNumber = new CountOff();
             int number = 11;
-            //then
+            //when
             var result = countNumber.GetRequirementFour(number);
             Assert.Equal("11", result);
         }
@@ -199,9 +199,20 @@ namespace FizzBuzzTest
             //given
             CountOff countNumber = new CountOff();
             int number = -2;
-            //then
+            //when
             var result = countNumber.GetRequirementFour(number);
             Assert.Equal("Invalid negative Number!", result);
+        }
+
+        [Fact]
+        public void Should_return_Fizz_when_CountOff_contains3_and_IsMultiplesOf_5_or_7()
+        {
+            //given
+            CountOff countNumber = new CountOff();
+            int number = 30;
+            //when
+            var result = countNumber.GetRequirementFive(number);
+            Assert.Equal("Fizz", result);
         }
 
     }
