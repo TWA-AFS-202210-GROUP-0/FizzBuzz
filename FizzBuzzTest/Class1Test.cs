@@ -50,6 +50,48 @@ namespace FizzBuzzTest
         }
 
         [Fact]
+        public void Should_return_FizzBuzz_when_number_contain_3_and_5()
+        {
+            // Given
+            FizzBuzz fizzBuzz = new FizzBuzz();
+            var number = 15;
+
+            // When
+            var res = fizzBuzz.CountOff(number);
+
+            //then
+            Assert.Equal(res, "FizzBuzz");
+        }
+
+        [Fact]
+        public void Should_return_FizzWhizz_when_number_contain_3_and_7()
+        {
+            // Given
+            FizzBuzz fizzBuzz = new FizzBuzz();
+            var number = 21;
+
+            // When
+            var res = fizzBuzz.CountOff(number);
+
+            //then
+            Assert.Equal(res, "FizzWhizz");
+        }
+
+        [Fact]
+        public void Should_return_FizzBuzzWhizz_when_number_contain_3_and_7()
+        {
+            // Given
+            FizzBuzz fizzBuzz = new FizzBuzz();
+            var number = 105;
+
+            // When
+            var res = fizzBuzz.CountOff(number);
+
+            //then
+            Assert.Equal(res, "FizzBuzzWhizz");
+        }
+
+        [Fact]
         public void Should_return_Fizz_when_number_contain_3()
         {
             // Given
