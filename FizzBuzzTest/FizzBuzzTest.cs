@@ -95,7 +95,7 @@ namespace FizzBuzzTest
         {
             //givem
             var fb = new FizzBuzzClass();
-            int num = 35;
+            int num = 70;
 
             //when
             var shout = fb.Shout(num);

@@ -28,6 +28,11 @@ namespace FizzBuzz
                 res += "Whizz";
             }
 
+            if (res == string.Empty)
+            {
+                res = number.ToString();
+            }
+
             return res;
         }
     }
